@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenny Castaneda - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <header class="hero">
+            <div class="avatar-status">
+                <img class="avatar" src="./files/profile.jpg" alt="Lenny Castaneda">
+                <div class="status-pill">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    status: actively looking
+                </div>
+            </div>
+
+            <h1><span class="bracket">&lt;</span>Lenny Castaneda<span class="bracket">/&gt;</span><span class="cursor"
+                    aria-hidden="true"></span></h1>
+            <p class="tagline">Based in North Carolina, building small tools and projects while
+                looking for my next role in software or IT.</p>
+            <p class="off-duty">off the clock: <span>gaming</span>, <span>working out</span>, and binging shows</p>
+            <div class="hero-links">
+                <a class="btn primary" href="./files/resume.pdf" download>Download Resume</a>
+                <a class="btn ghost" href="https://github.com/leny673" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn ghost" id="email-link-hero" href="#">Email Me</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <div class="eyebrow">about</div>
+            <p>
+                I'm a Computer Science graduate from California State University, Bakersfield, now settled in North
+                Carolina. Alongside my technical background, I've spent years in roles that required patience,
+                adaptability, and working closely with people, and I want to bring all of that into an entry-level
+                role in software or IT where I can keep learning, growing, and putting in the work.
+            </p>
+        </section>
+
+        <section class="projects">
+            <div class="eyebrow">projects</div>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Image Processing Desktop App</h3>
+                    <div class="project-stack">python · tkinter · pillow</div>
+                    <p class="desc">A CLI and GUI image editor with custom filters, live color-channel viewing,
+                        and a 5-state undo system.</p>
+                    <div class="links">
+                        <a href="https://github.com/leny673/Image-Processing-Project" target="_blank"
+                            rel="noopener">view on github →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>2D Game Suite</h3>
+                    <div class="project-stack">python · pygame</div>
+                    <p class="desc">Two playable mini-games featuring dynamic difficulty scaling,
+                        weighted collectible spawns, and persistent high scores.</p>
+                    <div class="links">
+                        <a href="https://github.com/leny673/PyGame-Project" target="_blank" rel="noopener">view on
+                            github →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Car Accident Dataset Analysis</h3>
+                    <div class="project-stack">python · pandas</div>
+                    <p class="desc">Cleaned and analyzed a dataset of 711,000+ rows and 21 columns, with a CLI
+                        tool for search and performance timing.</p>
+                    <div class="links">
+                        <a href="https://github.com/leny673/CMPS-3500-Project" target="_blank" rel="noopener">view on
+                            github →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Rate 'Em Web App</h3>
+                    <div class="project-stack">php · mariadb · html/css/js</div>
+                    <p class="desc">A web application built with a 4-person team for searching, rating, and reviewing
+                        properties for rent, including user registration and a MariaDB-backed database layer.</p>
+                    <div class="links">
+                        <a href="https://github.com/leny673/Rate_Em" target="_blank" rel="noopener">view on github →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="eyebrow">skills</div>
+            <ul class="skill-list">
+                <li>Python</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>HTML/CSS</li>
+                <li>Lua</li>
+                <li>C++</li>
+                <li>Git/GitHub</li>
+                <li>Data Analysis</li>
+                <li>Debugging & Troubleshooting</li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <div class="eyebrow">education</div>
+            <div class="edu-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <div class="meta">California State University, Bakersfield - Aug 2018 - Dec 2022</div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="eyebrow">contact</div>
+            <p>Open to entry-level software, IT, and support roles. Feel free to reach out about any of the projects above.</p>
+            <div class="contact-links">
+                <a class="btn primary" id="email-link-footer" href="#">Email Me</a>
+            </div>
+            <p class="fine-print">© <span id="year"></span> Lenny Castaneda</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const emailUser = "lecast13";
+        const emailDomain = "outlook.com";
+        const email = emailUser + "@" + emailDomain;
+
+        const heroLink = document.getElementById('email-link-hero');
+        if (heroLink) heroLink.href = "mailto:" + email;
+
+        const footerLink = document.getElementById('email-link-footer');
+        if (footerLink) {
+            footerLink.href = "mailto:" + email;
+        }
+    </script>
+
+</body>
+
+</html>
